@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project activeEnvironment="Default"
-	name="Google Map REST Tests" resourceRoot="" soapui-version="5.0.0"
-	abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project activeEnvironment="Default" name="Google Map REST Tests" resourceRoot="" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config">
 	<con:settings>
-		<con:setting
-			id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+		<con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
   <con:entry key="Report Format(s)" value=""/>
   <con:entry key="Host:Port" value=""/>
   <con:entry key="Export JUnit Results" value="false"/>
@@ -36,58 +33,55 @@
   <con:entry key="Save Project" value="false"/>
 </xml-fragment>]]></con:setting>
 	</con:settings>
-	<con:interface xsi:type="con:RestService"
-		wadlVersion="http://wadl.dev.java.net/2009/02" name="http://maps.googleapis.com"
-		type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-		<con:settings />
-		<con:definitionCache type="TEXT" rootPart="" />
+	<con:interface xsi:type="con:RestService" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://maps.googleapis.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<con:settings/>
+		<con:definitionCache type="TEXT" rootPart=""/>
 		<con:endpoints>
 			<con:endpoint>http://maps.googleapis.com</con:endpoint>
 		</con:endpoints>
 		<con:resource name="Xml" path="/maps/api/geocode/xml">
-			<con:settings />
+			<con:settings/>
 			<con:parameters>
 				<con:parameter>
 					<con:name>address</con:name>
 					<con:value>Blarenberglaan 32800 Mechelen</con:value>
 					<con:style>QUERY</con:style>
 					<con:default>Blarenberglaan 32800 Mechelen</con:default>
-					<con:path xsi:nil="true" />
-					<con:description xsi:nil="true" />
+					<con:path xsi:nil="true"/>
+					<con:description xsi:nil="true"/>
 				</con:parameter>
 				<con:parameter>
 					<con:name>sensor</con:name>
 					<con:value>false</con:value>
 					<con:style>QUERY</con:style>
 					<con:default>false</con:default>
-					<con:path xsi:nil="true" />
-					<con:description xsi:nil="true" />
+					<con:path xsi:nil="true"/>
+					<con:description xsi:nil="true"/>
 				</con:parameter>
 			</con:parameters>
 			<con:method name="Xml" method="GET">
-				<con:settings />
-				<con:parameters />
+				<con:settings/>
+				<con:parameters/>
 				<con:representation type="RESPONSE">
 					<con:mediaType>application/xml; charset=UTF-8</con:mediaType>
 					<con:status>200</con:status>
-					<con:params />
+					<con:params/>
 					<con:element>GeocodeResponse</con:element>
 				</con:representation>
 				<con:request name="Ordina" mediaType="application/json">
 					<con:settings>
-						<con:setting
-							id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
 					</con:settings>
 					<con:endpoint>http://maps.googleapis.com</con:endpoint>
-					<con:request />
+					<con:request/>
 					<con:originalUri>http://maps.googleapis.com/maps/api/geocode/xml
 					</con:originalUri>
 					<con:credentials>
 						<con:authType>No Authorization</con:authType>
 					</con:credentials>
-					<con:jmsConfig JMSDeliveryMode="PERSISTENT" />
-					<con:jmsPropertyConfig />
-					<con:parameters />
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
+					<con:parameters/>
 					<con:parameterOrder>
 						<con:entry>address</con:entry>
 						<con:entry>sensor</con:entry>
@@ -95,21 +89,19 @@
 				</con:request>
 				<con:request name="Belgacom" mediaType="application/json">
 					<con:settings>
-						<con:setting
-							id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+						<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
 					</con:settings>
 					<con:endpoint>http://maps.googleapis.com</con:endpoint>
-					<con:request />
+					<con:request/>
 					<con:originalUri>http://maps.googleapis.com/maps/api/geocode/xml
 					</con:originalUri>
 					<con:credentials>
 						<con:authType>No Authorization</con:authType>
 					</con:credentials>
-					<con:jmsConfig JMSDeliveryMode="PERSISTENT" />
-					<con:jmsPropertyConfig />
+					<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+					<con:jmsPropertyConfig/>
 					<con:parameters>
-						<entry key="address" value="Koning Albert II laan 27 Brussel"
-							xmlns="http://eviware.com/soapui/config" />
+						<entry key="address" value="Koning Albert II laan 27 Brussel" xmlns="http://eviware.com/soapui/config"/>
 					</con:parameters>
 					<con:parameterOrder>
 						<con:entry>address</con:entry>
@@ -120,24 +112,19 @@
 		</con:resource>
 	</con:interface>
 	<con:testSuite name="Tests">
-		<con:settings />
+		<con:settings/>
 		<con:runType>SEQUENTIAL</con:runType>
-		<con:testCase failOnError="true" failTestCaseOnErrors="true"
-			keepSession="false" maxResults="0" name="Check Ordina"
-			searchProperties="true" id="d4ffaa92-acab-4da6-8b44-6f1a9f33dda6">
-			<con:settings />
+		<con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Check Ordina" searchProperties="true" id="d4ffaa92-acab-4da6-8b44-6f1a9f33dda6">
+			<con:settings/>
 			<con:testStep type="restrequest" name="Ordina">
-				<con:settings />
-				<con:config service="http://maps.googleapis.com"
-					resourcePath="/maps/api/geocode/xml" methodName="Xml"
-					xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+				<con:settings/>
+				<con:config service="http://maps.googleapis.com" resourcePath="/maps/api/geocode/xml" methodName="Xml" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 					<con:restRequest name="Ordina" mediaType="application/json">
 						<con:settings>
-							<con:setting
-								id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
 						</con:settings>
 						<con:endpoint>http://maps.googleapis.com</con:endpoint>
-						<con:request />
+						<con:request/>
 						<con:originalUri>http://maps.googleapis.com/maps/api/geocode/xml
 						</con:originalUri>
 						<con:assertion type="XPath Match" name="Result OK">
@@ -151,7 +138,7 @@
 						</con:assertion>
 						<con:assertion type="Simple Contains" name="Contains">
 							<con:configuration>
-								<token>Antwerp</token>
+								<token>Antwerpen</token>
 								<ignoreCase>true</ignoreCase>
 								<useRegEx>false</useRegEx>
 							</con:configuration>
@@ -159,7 +146,7 @@
 						<con:assertion type="XPath Match" name="Antwerp">
 							<con:configuration>
 								<path>/GeocodeResponse/result/address_component[3]/long_name</path>
-								<content>Antwerp</content>
+								<content>Antwerpen</content>
 								<allowWildcards>false</allowWildcards>
 								<ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
 								<ignoreComments>false</ignoreComments>
@@ -168,9 +155,9 @@
 						<con:credentials>
 							<con:authType>No Authorization</con:authType>
 						</con:credentials>
-						<con:jmsConfig JMSDeliveryMode="PERSISTENT" />
-						<con:jmsPropertyConfig />
-						<con:parameters />
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
+						<con:parameters/>
 						<con:parameterOrder>
 							<con:entry>address</con:entry>
 							<con:entry>sensor</con:entry>
@@ -178,24 +165,19 @@
 					</con:restRequest>
 				</con:config>
 			</con:testStep>
-			<con:properties />
+			<con:properties/>
 		</con:testCase>
-		<con:testCase failOnError="true" failTestCaseOnErrors="true"
-			keepSession="false" maxResults="0" name="Check Belgacom"
-			searchProperties="true" id="24530cc9-9943-40bc-8dc8-32696b7321fe">
-			<con:settings />
+		<con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Check Belgacom" searchProperties="true" id="24530cc9-9943-40bc-8dc8-32696b7321fe">
+			<con:settings/>
 			<con:testStep type="restrequest" name="Xml - Belgacom">
-				<con:settings />
-				<con:config service="http://maps.googleapis.com"
-					resourcePath="/maps/api/geocode/xml" methodName="Xml"
-					xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+				<con:settings/>
+				<con:config service="http://maps.googleapis.com" resourcePath="/maps/api/geocode/xml" methodName="Xml" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 					<con:restRequest name="Xml - Belgacom" mediaType="application/json">
 						<con:settings>
-							<con:setting
-								id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+							<con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
 						</con:settings>
 						<con:endpoint>http://maps.googleapis.com</con:endpoint>
-						<con:request />
+						<con:request/>
 						<con:originalUri>http://maps.googleapis.com/maps/api/geocode/xml
 						</con:originalUri>
 						<con:assertion type="XPath Match" name="XPath Match">
@@ -207,10 +189,10 @@
 								<ignoreComments>false</ignoreComments>
 							</con:configuration>
 						</con:assertion>
-						<con:assertion type="XPath Match" name="Brussels">
+						<con:assertion type="XPath Match" name="Brussel">
 							<con:configuration>
-								<path>/GeocodeResponse/result/address_component/long_name[text()="Brussels"]</path>
-								<content>Brussels</content>
+								<path>/GeocodeResponse/result/address_component/long_name[text()="Brussel"]</path>
+								<content>Brussel</content>
 								<allowWildcards>false</allowWildcards>
 								<ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
 								<ignoreComments>false</ignoreComments>
@@ -219,11 +201,10 @@
 						<con:credentials>
 							<con:authType>No Authorization</con:authType>
 						</con:credentials>
-						<con:jmsConfig JMSDeliveryMode="PERSISTENT" />
-						<con:jmsPropertyConfig />
+						<con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+						<con:jmsPropertyConfig/>
 						<con:parameters>
-							<entry key="address" value="Koning Albert II laan 27 Brussel"
-								xmlns="http://eviware.com/soapui/config" />
+							<entry key="address" value="Koning Albert II laan 27 Brussel" xmlns="http://eviware.com/soapui/config"/>
 						</con:parameters>
 						<con:parameterOrder>
 							<con:entry>address</con:entry>
@@ -232,12 +213,12 @@
 					</con:restRequest>
 				</con:config>
 			</con:testStep>
-			<con:properties />
+			<con:properties/>
 		</con:testCase>
-		<con:properties />
+		<con:properties/>
 	</con:testSuite>
-	<con:properties />
-	<con:wssContainer />
-	<con:oAuth2ProfileContainer />
-	<con:sensitiveInformation />
+	<con:properties/>
+	<con:wssContainer/>
+	<con:oAuth2ProfileContainer/>
+	<con:sensitiveInformation/>
 </con:soapui-project>
